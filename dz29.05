@@ -1,0 +1,34 @@
+#1
+ 
+namespace practise30._05
+{
+class Resume
+    {
+        [STAThread]
+        static void Main()
+        {
+            string[] pages = new string[] { "Имя: Олег\nВозраст: 32", "Адрес: г.Москва", "Образование: высшее" };
+ 
+            int totalCounter = 0;
+ 
+            for (int i = 0; i < pages.Length; i++)
+            {
+                totalCounter += pages[i].Length;
+ 
+                if (i ==  pages.Length - 1)
+                {
+                    double average = totalCounter / pages.Length;
+                    MessageBox.Show(pages[i], $"Среднее число символов:{average}. Общее число символов:{totalCounter}\n");
+                }
+ 
+                else
+                {
+                    MessageBox.Show(pages[i]);
+                }
+            }
+
+ 
+ 
+        }
+    }
+}
